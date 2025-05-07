@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { ArrowRight, Shield, Clock, ChartBar } from 'lucide-react';
+import { ArrowRight, Shield, Clock, BarChart } from 'lucide-react';
 
 const CallToAction: React.FC = () => {
   const [ref, inView] = useInView({
@@ -22,7 +22,7 @@ const CallToAction: React.FC = () => {
   };
 
   const features = [
-    { icon: <ChartBar className="h-5 w-5" />, text: "Detailed analytics" },
+    { icon: <BarChart className="h-5 w-5" />, text: "Detailed analytics" },
     { icon: <Clock className="h-5 w-5" />, text: "14-day free trial" },
     { icon: <Shield className="h-5 w-5" />, text: "No credit card required" }
   ];
