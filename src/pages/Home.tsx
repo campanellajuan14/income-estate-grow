@@ -37,15 +37,37 @@ function Home() {
     <main className="overflow-hidden">
       <Hero />
       <div className="relative">
-        {/* Background decorative elements */}
-        <div className="absolute top-[15%] right-0 w-64 h-64 bg-blue-100 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl opacity-30 z-0"></div>
-        <div className="absolute bottom-[30%] left-0 w-80 h-80 bg-accent-100 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl opacity-40 z-0"></div>
+        {/* Enhanced background decorative elements */}
+        <div className="absolute top-[10%] right-0 w-96 h-96 bg-primary-50/70 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl opacity-60 z-0"></div>
+        <div className="absolute top-[40%] left-0 w-80 h-80 bg-accent-100/60 rounded-full translate-y-1/3 -translate-x-1/3 blur-3xl opacity-60 z-0"></div>
+        <div className="absolute bottom-[20%] right-[10%] w-72 h-72 bg-secondary-100/50 rounded-full blur-3xl opacity-50 z-0"></div>
+        
+        {/* Decorative lines */}
+        <div className="absolute left-0 right-0 top-[25%] h-px bg-gradient-to-r from-transparent via-primary-200/30 to-transparent"></div>
+        <div className="absolute left-0 right-0 top-[55%] h-px bg-gradient-to-r from-transparent via-accent-200/30 to-transparent"></div>
+        <div className="absolute left-0 right-0 bottom-[30%] h-px bg-gradient-to-r from-transparent via-primary-200/30 to-transparent"></div>
         
         <PropertyAnalysis />
         <FeatureSection />
         <FinancialAnalytics />
+        
+        {/* Subtle divider between sections */}
+        <div className="container mx-auto px-4">
+          <div className="w-full max-w-5xl mx-auto">
+            <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent my-8"></div>
+          </div>
+        </div>
+        
         <Calculator />
         <Statistics />
+        
+        {/* Subtle divider with accent color */}
+        <div className="container mx-auto px-4">
+          <div className="w-full max-w-5xl mx-auto">
+            <div className="h-px bg-gradient-to-r from-transparent via-accent-200/50 to-transparent my-8"></div>
+          </div>
+        </div>
+        
         <Testimonials />
         <Benefits />
         <CallToAction />
