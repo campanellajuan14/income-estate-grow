@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,10 +6,13 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   
   body {
-    @apply font-sans text-gray-800;
+    @apply font-sans text-gray-800 bg-white;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -16,11 +20,11 @@
   }
 
   h1 {
-    @apply text-4xl md:text-5xl;
+    @apply text-4xl md:text-5xl lg:text-6xl;
   }
 
   h2 {
-    @apply text-3xl md:text-4xl;
+    @apply text-3xl md:text-4xl lg:text-5xl;
   }
 
   h3 {
@@ -30,6 +34,10 @@
   p {
     @apply leading-relaxed;
   }
+  
+  ::selection {
+    @apply bg-primary-500/20 text-primary-800;
+  }
 }
 
 @layer components {
@@ -38,19 +46,19 @@
   }
 
   .btn {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-200 text-center;
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-300 text-center;
   }
 
   .btn-primary {
-    @apply bg-primary-500 text-white hover:bg-primary-600;
+    @apply bg-primary-500 text-white hover:bg-primary-600 hover:shadow-lg hover:shadow-primary-500/20 transform hover:-translate-y-0.5;
   }
 
   .btn-secondary {
-    @apply bg-white text-primary-500 hover:bg-gray-50 border border-gray-200;
+    @apply bg-white text-primary-500 hover:bg-gray-50 hover:shadow-md border border-gray-200 transform hover:-translate-y-0.5;
   }
 
   .section {
-    @apply py-16 md:py-24;
+    @apply py-16 md:py-24 lg:py-32 relative overflow-hidden;
   }
 
   .section-title {
@@ -62,10 +70,80 @@
   }
 
   .feature-card {
-    @apply p-6 rounded-xl bg-white shadow-md hover:shadow-lg transition-shadow duration-300;
+    @apply p-6 rounded-xl bg-white shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100;
   }
 
   .gradient-bg {
     @apply bg-gradient-to-br from-primary-500 to-primary-700 text-white;
   }
+  
+  .hover-card {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+  
+  .backdrop-blur-card {
+    @apply backdrop-blur-md bg-white/90 border border-white/20 shadow-xl;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent;
+  }
+  
+  .section-divider {
+    @apply w-24 h-1 bg-primary-500 mx-auto my-8;
+  }
+  
+  .floating-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.smooth-shadow {
+  box-shadow: 
+    0 1px 1px rgba(0,0,0,0.01), 
+    0 2px 2px rgba(0,0,0,0.01), 
+    0 4px 4px rgba(0,0,0,0.01), 
+    0 8px 8px rgba(0,0,0,0.01),
+    0 16px 16px rgba(0,0,0,0.01);
+}
+
+.shadow-light {
+  box-shadow: 0 0 25px rgba(0, 102, 255, 0.1);
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
 }
