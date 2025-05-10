@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ArrowRight, X, Menu } from 'lucide-react';
@@ -62,7 +63,7 @@ const Header: React.FC = () => {
         >
           <div className="relative w-auto h-10">
             <img 
-              src="/lovable-uploads/f04281fc-458c-4485-afd7-9a2d2c637311.png" 
+              src="/lovable-uploads/5ad6bbb2-4b30-4349-bc89-69981060df17.png" 
               alt="IncomePlus Logo" 
               className="h-10 w-auto"
             />
