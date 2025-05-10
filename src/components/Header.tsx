@@ -63,9 +63,9 @@ const Header: React.FC = () => {
         >
           <div className="relative w-auto h-10">
             <img 
-              src="public/lovable-uploads/d2156285-fd04-47b8-b867-77913f157396.png" 
+              src="/lovable-uploads/d2156285-fd04-47b8-b867-77913f157396.png" 
               alt="IncomePlus Logo" 
-              className="h-10 w-auto filter brightness-0 saturate-100 invert-0 sepia-0 hue-rotate-[190deg] brightness-50"
+              className="h-10 w-auto"
             />
           </div>
         </Link>
