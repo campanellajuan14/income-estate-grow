@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ArrowRight, BarChart2, X, Menu } from 'lucide-react';
+import { ArrowRight, X, Menu } from 'lucide-react';
 
 const Header: React.FC = () => {
   const location = useLocation();
@@ -61,10 +61,11 @@ const Header: React.FC = () => {
           className="flex items-center space-x-2 relative z-10"
           aria-label="IncomePlus Home"
         >
-          <div className="bg-primary-500 text-white p-1.5 rounded">
-            <BarChart2 className="h-6 w-6" />
-          </div>
-          <span className="font-bold text-xl text-primary-700">IncomePlus</span>
+          <img 
+            src="public/lovable-uploads/bdfdc6fc-9c00-4a44-a1f1-94a7c72d2c35.png" 
+            alt="IncomePlus Logo" 
+            className="h-10 w-auto"
+          />
         </Link>
 
         {/* Desktop Navigation */}
